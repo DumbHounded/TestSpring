@@ -14,6 +14,7 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
         List<String> list1 = (List<String>)context.getBean("llist");
         List<String> list2 = (List<String>)context.getBean("alist");
+        TestPInterface pInterface = (TestPInterface)context.getBean("ptest");
 
         list1.add("Hello");list1.add("world");
         list2.addAll(list1);
@@ -28,5 +29,8 @@ public class Main {
         System.out.println(list1.getClass().getSimpleName());
         System.out.println(list2.getClass().getSimpleName());
 
+        System.out.println("val1 = " + pInterface.GetValue1());
+        System.out.println("val2 = " + pInterface.GetValue2());
+        System.out.println("val3 = " + pInterface.GetValue3());
     }
 }

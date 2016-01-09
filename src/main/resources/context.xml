@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="llist" class="java.util.LinkedList"/>
     <bean id="alist" class="java.util.ArrayList"/>
+
+    <bean id="ptest" class="xyz.incraft.testspring.TestP"
+          p:val1="1"
+          p:val2="2"
+          p:val3="3"
+    />
 
 
 </beans>
